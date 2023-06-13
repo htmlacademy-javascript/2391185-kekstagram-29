@@ -1,4 +1,4 @@
-let checkStringLength = function(inStr, inStrLength){
+function checkStringLength (inStr, inStrLength){
   return (inStr.length <= inStrLength);
 };
 
@@ -29,3 +29,13 @@ function extractNumbers(inStr) {
   str = str.replace(/[\D]/gi, '');
   return parseInt(str,10);
 }
+
+checkStringLength('Тестовая строка', 14);
+isPalindrome('Лёша на полке клопа нашёл ');
+isPalindrome2('Лёша на полке клопа нашёл ');
+extractNumbers('2023 год');            // 2023
+extractNumbers('ECMAScript 2022');     // 2022
+extractNumbers('1 кефир, 0.5 батона'); // 105
+extractNumbers('агент 007');           // 7
+extractNumbers('а я томат');           // NaN;
+extractNumbers('-1');                  // 1
